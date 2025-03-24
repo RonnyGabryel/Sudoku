@@ -2,19 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
-Estruturas de programação:
-Instruções 'if': Utilizadas ✅
-Instruções 'switch': Incorporadas no menu ✅
-Loops 'while': Utilizados no menu e interação do jogador ✅
-Loops 'for': Utilizados para iterar sobre as matrizes do tabuleiro ✅
-Manipulação de 'string': Feita ao capturar e tratar o nome do jogador ✅
-Uso de 'vetor': Presentes implicitamente na manipulação de matrizes ✅
-Implementação de 'matriz': Utilizada para armazenar os tabuleiros e jogadas ✅
-Estrutura 'struct': Implementada com a struct Sudoku ✅
-*/
-
-
 int main() {
     int escolha = 0;
     char nome[50];
