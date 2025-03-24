@@ -54,6 +54,8 @@ int main() {
     };
 
     while (escolha != 5) {
+        system("clear"); // Use "cls" no Windows
+
         printf("\n- Jogo Sudoku Selecione a dificuldade -\n");
         printf("1 - Facil\n2 - Dificil\n3 - Especialista\n4 - Regras do Sudoku\n5 - Fechar o jogo\n");
         printf("Escolha uma opcao: ");
@@ -109,7 +111,7 @@ int main() {
                     }
                     printf("\n");
                 }
-                printf("\n%s, digite a linha (1-9), coluna (1-9) e valor (1-9)0: ", nome);
+                printf("\n%s, digite a linha (1-9), coluna (1-9) e valor (1-9): ", nome);
                 
                 int valid_input = 0;
                 while (!valid_input) {
@@ -134,8 +136,6 @@ int main() {
                 }
             }
         }
-
-        system("clear"); // Usar "cls" no Windows
     }
     return 0;
 }
