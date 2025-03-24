@@ -110,7 +110,21 @@ int main() {
                     printf("\n");
                 }
                 printf("\n%s, digite a linha (1-9), coluna (1-9) e valor (1-9) ou 0 para sair: ", nome);
-                scanf("%d %d %d", &linha, &coluna, &valor);
+                
+                int valid_input = 0;
+                while (!valid_input) {
+                    if (scanf("%d %d %d", &linha, &coluna, &valor) != 3) {
+                        printf("\nEntrada invalida! Por favor, insira três números inteiros.\n");
+                        getchar(); // Limpa o buffer
+                        continue;
+                    }
+                    if (linha < 1 || linha > 9 || coluna < 1 || coluna > 9 || valor < 1 || valor > 9) {
+                        printf("\nValores fora do intervalo! A linha e coluna devem ser entre 1 e 9, e o valor entre 1 e 9.\n");
+                    } else {
+                        valid_input = 1;
+                    }
+                }
+
                 if (linha == 0 || coluna == 0 || valor == 0) break;
                 if (jogo.fixo[linha-1][coluna-1] != 0) {
                     printf("\nNao pode alterar esse numero!\n");
